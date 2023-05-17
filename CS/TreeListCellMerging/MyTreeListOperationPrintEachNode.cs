@@ -21,9 +21,9 @@ namespace TreeListCellMerging
             this.printAllNodes = printAllNodes;
         }
 
-        protected override DevExpress.XtraPrinting.IBrick CreateCellBrick(CellInfo cell, DevExpress.XtraTreeList.Nodes.TreeListNode node)
+        protected override VisualBrick CreateCellBrick(CellInfo cell, DevExpress.XtraTreeList.Nodes.TreeListNode node)
         {
-            IVisualBrick brick = base.CreateCellBrick(cell, node) as IVisualBrick;
+            VisualBrick brick = base.CreateCellBrick(cell, node) as VisualBrick;
 
             int lastColumnIndex = treeList.Columns.Count - 1;
             int prevIndex = lastColumnIndex - 1;
