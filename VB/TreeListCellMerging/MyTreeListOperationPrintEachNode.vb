@@ -20,8 +20,8 @@ Namespace TreeListCellMerging
 			Me.printAllNodes = printAllNodes
 		End Sub
 
-		Protected Overrides Function CreateCellBrick(ByVal cell As CellInfo, ByVal node As DevExpress.XtraTreeList.Nodes.TreeListNode) As DevExpress.XtraPrinting.IBrick
-			Dim brick As IVisualBrick = TryCast(MyBase.CreateCellBrick(cell, node), IVisualBrick)
+		Protected Overrides Function CreateCellBrick(ByVal cell As CellInfo, ByVal node As DevExpress.XtraTreeList.Nodes.TreeListNode) As VisualBrick
+			Dim brick As VisualBrick = TryCast(MyBase.CreateCellBrick(cell, node), VisualBrick)
 
 			Dim lastColumnIndex As Integer = treeList.Columns.Count - 1
 			Dim prevIndex As Integer = lastColumnIndex - 1
